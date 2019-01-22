@@ -32,6 +32,9 @@
     "stylelint-config-primer": "2.2.11"
   },
   "dependencies": {
-    "jsdom": "^13.1.0"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jsdom": "^13.1.0",
+    "nodemon": "^1.18.9"
   }
 }

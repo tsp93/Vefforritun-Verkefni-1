@@ -4,6 +4,7 @@
 *.css text
 *.scss text
 *.js text
+*.mjs text
 *.ejs text
 *.json text
 *.sql text
