@@ -41,7 +41,7 @@ async function lecture(req, res, next) {
   const { title } = foundLecture;
   const header = [foundLecture.category, title];
   const html = items.createHtml(foundLecture.content);
-  let background = './public/img/header.jpg';
+  let background = lectures[0].image;
 
   if (foundLecture.image != null) {
     background = foundLecture.image;
