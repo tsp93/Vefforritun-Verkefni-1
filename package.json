@@ -23,7 +23,7 @@
     "@babel/preset-env": "7.1.0",
     "browser-sync": "2.26.3",
     "concurrently": "4.1.0",
-    "eslint": "5.8.0",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "2.14.0",
     "node-sass": "4.10.0",

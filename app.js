@@ -13,8 +13,6 @@ app.use('/img', express.static(path.join(__dirname, 'public/img')));
 
 app.use('/', lectures);
 
-
-
 const hostname = '127.0.0.1';
 const port = 3000;
 
