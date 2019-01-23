@@ -11,6 +11,7 @@
     "stylelint": "stylelint ./src/styles/**/*.scss --syntax scss",
     "sass": "node-sass --source-map-embed ./src/styles/styles.scss ./dist/styles.css",
     "sass-watch": "node-sass --source-map-embed --watch --recursive src/styles/styles.scss ./dist/styles.css",
+    "start": "nodemon app.js",
     "test": "concurrently npm:eslint npm:stylelint",
     "dev": "concurrently  npm:sass npm:sass-watch npm:rollup-watch npm:browser-sync"
   },

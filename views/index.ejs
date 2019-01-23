@@ -1,7 +1,27 @@
 <%- include('header') -%>
 
-<p>Halló heimur!</p>
-<p><%= locals.foo('baz'); %></p>
-<p><a href="/about">Lestu um okkur.</a></p>
+<ul class="filters">
+    <li><button data-category="html" class="filters__filter filters__filter--html">HTML</button></li>
+    <li><button data-category="css" class="filters__filter filters__filter--css">CSS</button></li>
+    <li><button data-category="javascript" class="filters__filter filters__filter--js">JavaScript</button></li>
+</ul>
+<div class="list">
+    <div class="list__row">
+        <% lectures.forEach((lecture) => { %>
+            <div class="list__col">
+                <a class="listItem">
+                    <div class="listItem__image">
+                        <img>
+                    </div>
+                    <div class="listItem__bottom">
+                        <span class="listItem__category"><%= lecture.category %></span>
+                        <h2 class="listItem__title"><%= lecture.title %></h2>
+                    </div>
+                </a>
+            </div>
+        <% }) %>
+    </div>
+</div>
+</main>
 
 <%- include('footer') -%>
