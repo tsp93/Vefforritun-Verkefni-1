@@ -9,9 +9,9 @@
     <div class="list__row">
         <% lectures.forEach((lecture) => { %>
             <div class="list__col">
-                <a class="listItem">
+                <a href= "<%= lecture.slug %>" class="listItem">
                     <div class="listItem__image">
-                        <img>
+                        <img src= "<%= lecture.thumbnail %>" alt="">
                     </div>
                     <div class="listItem__bottom">
                         <span class="listItem__category"><%= lecture.category %></span>
