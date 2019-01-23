@@ -20,7 +20,9 @@ async function list(req, res) {
   const header = ['Vefforitun', 'Fyrirlestrar'];
   const data = await getLectures();
 
-  res.render('index', { title, header, lectures: data.lectures });
+  res.render('index', {
+    title, header, lectures: data.lectures, background: './public/img/header.jpg',
+  });
 }
 
 async function lecture(req, res, next) {
@@ -39,9 +41,14 @@ async function lecture(req, res, next) {
   const { title } = foundLecture;
   const header = [foundLecture.category, title];
   const html = items.createHtml(foundLecture.content);
+  let background = './public/img/header.jpg';
+
+  if (foundLecture.image != null) {
+    background = foundLecture.image;
+  }
 
   return res.render('lecture', {
-    title, header, lecture: foundLecture, html,
+    title, header, lecture: foundLecture, html, background,
   });
 }
 
