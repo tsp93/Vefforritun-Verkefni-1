@@ -1,6 +1,6 @@
+// Requirements and declarations
 const path = require('path');
 const express = require('express');
-
 const lectures = require('./lectures');
 
 const app = express();
@@ -13,7 +13,31 @@ app.use('/img', express.static(path.join(__dirname, 'public/img')));
 
 app.use('/', lectures);
 
+// 404 error handler
+function notFoundHandler(req, res, next) {
+  const title = '404';
+  const message = 'Efni fannst ekki';
+  res.status(404).render('error', {
+    title, message,
+  });
+}
+
+// 500 error handler
+function errorHandler(err, req, res, next) {
+  console.error(err);
+  const title = '500';
+  const message = 'Villa';
+  res.status(500).render('error', {
+    title, message,
+  });
+}
+
+app.use(notFoundHandler);
+app.use(errorHandler);
+
 const hostname = '127.0.0.1';
 const port = 3000;
 
-app.listen(port, hostname, () => {});
+app.listen(port, hostname, () => {
+  console.info(`Server running at http://${hostname}:${port}/`);
+});

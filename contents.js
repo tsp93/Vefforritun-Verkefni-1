@@ -1,10 +1,10 @@
-// JSDOM stuff
+// JSDOM requirements and declarations
 const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
 const { document } = (new JSDOM()).window;
 
-
+// Functions copied from Hópverkefni2-sýnilausn
 function el(name, ...children) {
   const element = document.createElement(name);
 
@@ -106,6 +106,7 @@ function image(data, caption) {
   return item('image', blockquote);
 }
 
+// Generates and returns a html string from the contents of an array
 module.exports = {
   createHtml(content) {
     const col = el('div');
