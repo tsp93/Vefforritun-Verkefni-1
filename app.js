@@ -14,7 +14,7 @@ app.use('/img', express.static(path.join(__dirname, 'public/img')));
 app.use('/', lectures);
 
 // 404 error handler
-function notFoundHandler(req, res, next) {
+function notFoundHandler(req, res, next) { // eslint-disable-line
   const title = '404';
   const message = 'Efni fannst ekki';
   res.status(404).render('error', {
@@ -23,7 +23,7 @@ function notFoundHandler(req, res, next) {
 }
 
 // 500 error handler
-function errorHandler(err, req, res, next) {
+function errorHandler(err, req, res, next) { // eslint-disable-line
   console.error(err);
   const title = '500';
   const message = 'Villa';

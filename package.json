@@ -4,7 +4,7 @@
   "description": "v10",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint ./src/**/*.js",
+    "eslint": "eslint *.js",
     "rollup": "rollup -c",
     "rollup-watch": "rollup -c -w",
     "browser-sync": "browser-sync start --server --files index.html fyrirlestur.html ./dist/styles.css ./dist/bundle.js",
