@@ -20,7 +20,7 @@ async function getLectures() {
 
 // Creates a list of lectures which it sends to index.ejs
 async function list(req, res) {
-  const title = 'Verkefni 1';
+  const title = 'Fyrirlestrar';
   const header = ['Vefforitun', 'Fyrirlestrar'];
   const { lectures } = await getLectures();
 
